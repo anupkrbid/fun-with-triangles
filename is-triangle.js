@@ -6,6 +6,12 @@ button.addEventListener("click", () => {
   message.style.display = "none";
   if (!inputs[0].value || !inputs[1].value || !inputs[2].value) {
     showMessage("Enter value in all fields!");
+  } else if (
+    Number(inputs[0].value) <= 0 ||
+    Number(inputs[1].value) <= 0 ||
+    Number(inputs[2].value) <= 0
+  ) {
+    showMessage("Enter positive value in all fields!");
   } else {
     if (isTriangle()) {
       showMessage("Yay, these angles form a triangle!");
